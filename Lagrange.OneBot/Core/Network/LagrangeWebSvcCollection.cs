@@ -52,7 +52,8 @@ public sealed partial class LagrangeWebSvcCollection(IServiceProvider services, 
                     await webService.SendJsonAsync(result, args.Identifier, cancellationToken);
             };
 
-            try
+
+			try
             {
                 await webService.StartAsync(cancellationToken);
                 _webServices.Add((scope, webService));
